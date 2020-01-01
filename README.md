@@ -9,9 +9,21 @@ calculating average. N can be any positive non-zero integer.
 ```
 Example :   
  N : 4 
- Dataset : { 1, 3, 5, 6, 8, 10, 1 }
- Moving Average : {1, 2, 3, 3.75, 5.5, 7.25, 6.25}
+ Dataset : { 1}
+ Moving Average : 1
+ Dataset : { 1, 3, 4, 6}
+ Moving Average : 3.5
 ```
+In this implementation, when a new value is inserted in the data set, then oldest element in the set is removed, while the size of data set is equal to N. 
+For example, if 7 is inserted in the above set of data, then 1 is removed from the set as it is the oldest data in the set and moving average 
+is recalculated with the new set of data :
+```
+Example :   
+ N : 4
+ Dataset : { 3, 4, 6, 7}
+ Moving Average : 5.0
+```
+Here, moving average of last N elements in the data set has been calculated in O(1) time. 
 N has to be specified while initialing the class dataEntryImpl. And values in this data set is specified by the user as well.
 
 ## Pre-requisites
